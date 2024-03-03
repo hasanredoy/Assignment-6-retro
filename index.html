@@ -116,8 +116,8 @@
 
           <!-- search feild  -->
           <label class="input input-bordered flex items-center gap-2 w-[75%] mx-auto">
-            <input type="text" class="grow" placeholder="Search" />
-            <button class="btn bg-[#797DFC]">Search
+            <input id="inupt" type="text" class="grow" placeholder="Search" />
+            <button id="search-btn" class="btn bg-[#797DFC]">Search
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                 class="w-4 h-4 opacity-70">
                 <path fill-rule="evenodd"
@@ -150,16 +150,16 @@
       <section class=" flex-col lg:flex-row flex justify-between container mx-auto my-10">
         <!-- card div  -->
         <div id="cards-container" class="w-full lg:w-[58%]">
-
+        
         </div>
         <!-- value print div -->
         <div class=" bg-base-300 h-[50%] w-full lg:w-[40%] p-5 rounded-lg my-5">
           <div class="flex w-full justify-between">
-            <h3 class="text-2xl font-bold mr-[30%]">Title</h3>
+            <h3 class="text-2xl font-bold mr-[45%]">Title</h3>
 
-            <p class="flex w-[50%] lg:w-[70%] text-xl">
+            <p class="flex w-[50%] lg:w-[70%] text-xl ">
               <img src="/Frame.png" alt="">
-              Mark as Read <span id="count-of-mark" class="ml-2">(0)</span>
+              Mark as Read( <span id="count-of-mark" class="">0</span>)
             </p>
 
           </div>
