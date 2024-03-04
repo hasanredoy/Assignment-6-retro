@@ -152,9 +152,9 @@ searchBtn.addEventListener('click', ()=>{
  const input = document.getElementById('input')
  const inpValue = input.value
  const  low = inpValue.toLowerCase()
- setInterval(() => {
+ 
   mainPosts(low)
- }, 2000);
+ 
  loading(true)
 })
 
