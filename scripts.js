@@ -57,7 +57,7 @@ const showCards = async(getPosts) => {
   
     
  getPosts.forEach(post => {
-      // console.log(post)
+      console.log(post)
       const div = document.createElement('div')
       let green = ' '
       let red = ' '
@@ -68,14 +68,14 @@ const showCards = async(getPosts) => {
       } else {
         red = '<img src="Status.svg" alt="" srcset="">'
       }
-      div.className = ('p-5 card card-side bg-base-300 shadow-xl my-5')
+      div.className = ('p-5  card card-side bg-base-300 shadow-xl my-5')
       div.innerHTML = `
       
               <figure class="h-32 ">
-              <div id="green" class=" w-4 h-4 rounded-full absolute top-10 left-[80px] z-50">
+              <div id="green" class=" w-4 h-4 rounded-full absolute top-10  left-[11%]  ">
                 ${green}
                 </div>
-                <div id="red" class="w-4 h-4 rounded-full absolute top-10 left-[80px] z-50">
+                <div id="red" class="w-4 h-4 rounded-full absolute top-10 left-[11%] ">
                  ${red}
   
                 </div>
@@ -85,7 +85,7 @@ const showCards = async(getPosts) => {
   
               <div class="card-body text-xl mt-0">
                 <div class="border-b-2 border-dashed  pb-4">
-                  <div class="flex w-full lg:w-[70%] mb-4 justify-evenly">
+                  <div class="flex flex-col lg:flex-row w-full lg:w-[70%] mb-4 justify-evenly">
                     <p># <span>${post.category}</span></p>
                     <h3>Author : ${post.author.name ? post.author.name : 'No data Available'}</h3>
                   </div>
@@ -94,13 +94,15 @@ const showCards = async(getPosts) => {
   
                 </div>
                 <!-- icons div  -->
-                <div class="flex gap-3 lg:gap-9">
+                <div class="flex flex-col lg:flex-row gap-3 lg:gap-9">
+                  
                   <div>
                     <h4 class="flex gap-3"><span><img src="/Group 13.svg" alt=""></span> ${post.comment_count ? post.comment_count : 'No data Available'}</h4>
                   </div>
                   <div>
                   <h4 class="flex gap-3"><span><img src="/tabler-icon-eye.svg" alt=""></span>${post.view_count ? post.view_count : 'No data Available'}</h4>
                   </div>
+                  
                   <div>
                   <h4 class="flex gap-3"><span><img src="/tabler-icon-clock-hour-9.svg" alt=""></span>${post.posted_time ? post.posted_time : 'No data Available'}  min</h4>
                   </div>
@@ -150,7 +152,9 @@ searchBtn.addEventListener('click', ()=>{
  const input = document.getElementById('input')
  const inpValue = input.value
  const  low = inpValue.toLowerCase()
- mainPosts(low)
+ setInterval(() => {
+  mainPosts(low)
+ }, 2000);
  loading(true)
 })
 
@@ -185,7 +189,7 @@ const cardFunctionality =(posts)=>{
        console.log(element)
 
        const cardDiv = document.createElement('nav')
-       cardDiv.className = ('p-5 card w-96 bg-base-300 shadow-xlmy-5')
+       cardDiv.className = ('p-5 card w-[90%] lg:w-96 mx-auto bg-base-300 shadow-xl my-5')
        cardDiv.innerHTML=`
        
        <figure class="px-10 pt-10">
